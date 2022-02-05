@@ -1,0 +1,22 @@
+.container{
+    font-family: "Dosis";
+    font-weight: 600;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    & .title{
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    & .button{
+        background-color: #934A5F;
+        width: 150px;
+        color: white;
+        text-align: center;
+        border-radius: 4px;
+        padding: 5px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}

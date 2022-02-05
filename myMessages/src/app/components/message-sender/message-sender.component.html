@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="title">
+        Apodo
+    </div>
+    <input type="text" id="apodo" name="apodo" placeholder="Apodo que aparecerá como autor del Mensaje..." [(ngModel)]="author">
+    <div class="title">
+        Escribe el Mensaje
+    </div>
+    <textarea name="mensaje" id="mensaje" placeholder="Mensaje..." cols="30" rows="10" [(ngModel)]="message"></textarea>
+    <ng-container *ngIf="author.length > 0 && message.length > 0">
+        <app-button [name]="'Subir Mensaje'" [buttonConfig]="btnConfig" (click)="sendData()"></app-button>
+    </ng-container>
+</div>

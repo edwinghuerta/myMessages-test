@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="button-container">
+        <app-button [name]="buttonName" [buttonConfig]="btnConfig" (click)="filterToggle()"></app-button>
+    </div>
+    <ng-container *ngIf="filterByNew">
+        <ng-container *ngFor="let item of messages | reverse">
+            <app-message [author]="item.author" [message]="item.message" [date]="item.date"></app-message>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="!filterByNew">
+        <ng-container *ngFor="let item of messages">
+            <app-message [author]="item.author" [message]="item.message" [date]="item.date"></app-message>
+        </ng-container>
+    </ng-container>
+</div>
